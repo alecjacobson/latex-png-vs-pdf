@@ -21,7 +21,7 @@ using Illustrator.
 ## Why is including .png so slow?
 
 Unless the png file meets [certain strict
-conditions](https://tex.stackexchange.com/a/39933/13600), `pdfaltex` will
+conditions](https://tex.stackexchange.com/a/39933/13600), `pdflatex` will
 re-encode the image rather then simply copy it.
 
 It seems that .png files written directly from blender will not meet these
