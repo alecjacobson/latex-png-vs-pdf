@@ -33,3 +33,30 @@ unfortunately this breaks the copy-conditions and will be slow to include.
 Embedding the .png into a .pdf can sometimes result in a bigger file, but .pdf
 (along with .jpg and others) will just be copied by `pdflatex`, hence fast to
 compile.
+
+## So what should I do with all my .png files?
+
+At the very least you could convert them to .pdf using imagemagick:
+
+    magick trophy.png trophy.pdf
+
+There a bunch of other reasons it might convenient to use .pdf for your image
+files anyway (e.g., adding vector graphic overlays, text labels, etc.). So I
+tend to generate raw .png files for 2D/3D renderings and then always create a
+.pdf for my figure using Illustrator.
+
+You _could_ convert .png to .jpg but be careful about quality loss due to
+compression settings or loss of transparency.
+
+You _could_ convert your .png to a .png that meets all of the [strict
+conditions](https://tex.stackexchange.com/a/39933/13600), but remember this
+means no transparency.
+
+(On Mac first do `brew install netpbm`)
+
+One way to do this is:
+
+    pngtopnm trophy.png > trophy.pnm
+    pnmtopng trophy.pnm > trophy.png
+
+But why not just use .pdf?
