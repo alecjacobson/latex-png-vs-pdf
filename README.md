@@ -2,7 +2,7 @@
 
 Running
 
-   bash benchmark.sh
+    bash benchmark.sh
 
 Should output something like:
 
